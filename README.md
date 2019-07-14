@@ -1,5 +1,5 @@
 
-# Mcbeev.KenticoCache.Doctor
+# Mcbeev.Kentico.CacheDoctor
 
 A library useful for working with Kentico 12 MVC and Caching. Supports .Net framework 4.6.1 through 4.7.2.
 
