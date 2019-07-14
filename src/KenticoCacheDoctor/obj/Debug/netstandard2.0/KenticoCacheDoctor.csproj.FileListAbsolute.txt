@@ -1,0 +1,6 @@
+C:\ClientProjects\KenticoCacheDoctor\src\KenticoCacheDoctor\obj\Debug\netstandard2.0\KenticoCacheDoctor.csprojAssemblyReference.cache
+C:\ClientProjects\KenticoCacheDoctor\src\KenticoCacheDoctor\obj\Debug\netstandard2.0\KenticoCacheDoctor.csproj.CoreCompileInputs.cache
+C:\ClientProjects\KenticoCacheDoctor\src\KenticoCacheDoctor\obj\Debug\netstandard2.0\KenticoCacheDoctor.AssemblyInfoInputs.cache
+C:\ClientProjects\KenticoCacheDoctor\src\KenticoCacheDoctor\obj\Debug\netstandard2.0\KenticoCacheDoctor.AssemblyInfo.cs
+C:\ClientProjects\KenticoCacheDoctor\src\KenticoCacheDoctor\bin\Debug\netstandard2.0\KenticoCacheDoctor.deps.json
+C:\ClientProjects\KenticoCacheDoctor\src\KenticoCacheDoctor\bin\Debug\netstandard2.0\KenticoCacheDoctor.dll
