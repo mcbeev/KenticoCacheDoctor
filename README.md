@@ -7,5 +7,10 @@ Use NuGet to install KenticoCacheDoctor.
 
     Install-Package KenticoCacheDoctor
 
+To enable, add the following to your root web.config on the MVC Live site:
+
+    <add key="KenticoCacheDoctor:Enabled" value="true"/>
+
+
 For more information, read the [introduction blog post](https://www.mcbeev.com/KenticoCacheDoctor).
 
