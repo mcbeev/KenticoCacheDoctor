@@ -1,13 +1,13 @@
 
-# KenticoCacheDoctor
+# Mcbeev.KenticoCache.Doctor
 
-A library useful for working with Kentico 12 MVC and Caching.
+A library useful for working with Kentico 12 MVC and Caching. Supports .Net framework 4.6.1 through 4.7.2.
 
 ## Installation
 
-Use NuGet to install KenticoCacheDoctor.
+Use NuGet to install Mcbeev.Kentico.CacheDoctor.
 
-    Install-Package KenticoCacheDoctor
+    Install-Package Mcbeev.Kentico.CacheDoctor
 
 To enable, add the following to your root web.config on the MVC Live site:
 
