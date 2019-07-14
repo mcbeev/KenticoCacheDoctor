@@ -64,11 +64,12 @@ namespace KenticoCacheDoctor
                     strongDisplay = true;
                 }
 
-                sb.AppendFormat(@"<tr><td><a href=""/{0}?{1}={2}"" target=""_blank"">{3}</a></td>",
+                sb.AppendFormat(@"<tr><td><a href=""{4}/{0}?{1}={2}"" target=""_blank"">{3}</a></td>",
                    Constants.RouteName,
                    Constants.RouteQueryStringVariableName,
                    key,
-                   Constants.LabelBust);
+                   Constants.LabelBust,
+                   (context.Request.ApplicationPath == "/") ? string.Empty : context.Request.ApplicationPath);
 
                 if (item.Value is CacheItemContainer)
                 {
@@ -97,7 +98,9 @@ namespace KenticoCacheDoctor
             bool ignoreThisRoute = false;
 
             //Ensure this is not our custom route we are injecting
-            if (context.Request.RawUrl.StartsWith("/"+ Constants.RouteName, StringComparison.OrdinalIgnoreCase))
+            var appPath = (context.Request.ApplicationPath == "/") ? string.Empty : context.Request.ApplicationPath;
+            appPath += "/";
+            if (context.Request.RawUrl.StartsWith(appPath + Constants.RouteName, StringComparison.OrdinalIgnoreCase))
             {
                 ignoreThisRoute = true;
             }

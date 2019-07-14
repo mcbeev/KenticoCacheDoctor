@@ -24,7 +24,7 @@ namespace KenticoCacheDoctor
 
         public const string TableHeadingValue = "Value";
 
-        public const string CacheKeyMarker = "_____";
+        public const string CacheKeyMarker = ":::::";
 
         public const string LabelBust = "Bust";
 
