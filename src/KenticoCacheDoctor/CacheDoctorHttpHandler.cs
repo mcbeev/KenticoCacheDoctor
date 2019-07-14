@@ -64,7 +64,7 @@ namespace KenticoCacheDoctor
                     strongDisplay = true;
                 }
 
-                sb.AppendFormat(@"<tr><td><a href=""{4}/{0}?{1}={2}"" target=""_blank"">{3}</a></td>",
+                sb.AppendFormat(@"<tr><td><a href=""{4}/{0}/?{1}={2}"" target=""_blank"">{3}</a></td>",
                    Constants.RouteName,
                    Constants.RouteQueryStringVariableName,
                    key,
