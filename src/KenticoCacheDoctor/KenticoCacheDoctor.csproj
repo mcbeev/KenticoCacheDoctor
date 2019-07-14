@@ -7,7 +7,15 @@
   <PropertyGroup>
     <VersionPrefix>1.0.0</VersionPrefix>
     <PackageDescription>Kentico Cache Doctor is a utility for working with Cache on a Kentico 12 site.</PackageDescription>
+    <Title>Kentico Cache Doctor</Title>
+    <Authors>Brian McKeiver</Authors>
+    <licenseUrl>https://raw.githubusercontent.com/mcbeev/KenticoCacheDoctor/master/LICENSE</licenseUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/mcbeev/KenticoCacheDoctor/master/LICENSE</PackageLicenseUrl>
+    <projectURL>https://github.com/mcbeev/KenticoCacheDoctor</projectURL>
     <Copyright>2019</Copyright>
+    <PackageProjectUrl>https://github.com/mcbeev/KenticoCacheDoctor</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mcbeev/KenticoCacheDoctor</RepositoryUrl>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
