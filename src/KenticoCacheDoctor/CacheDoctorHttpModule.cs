@@ -1,4 +1,6 @@
-﻿using System.Web;
+﻿using System;
+using System.Linq;
+using System.Web;
 using System.Web.Routing;
 
 namespace KenticoCacheDoctor
@@ -6,7 +8,8 @@ namespace KenticoCacheDoctor
     public class CacheDoctorHttpModule : IHttpModule
     {
         private static bool HasAppStarted = false;
-        private readonly static object _syncObject = new object();
+        private static bool IsGlimpsePackagePresent = false;
+        private static readonly object _syncObject = new object();
 
         public void Init(HttpApplication context)
         {
@@ -21,23 +24,39 @@ namespace KenticoCacheDoctor
                     {
                         // Run application StartUp code here
                         var route = new Route(Constants.RouteName, new KenticoCacheDoctorRouteHandler());
-                        RouteTable.Routes.Add(Constants.RouteName, route);
+                        RouteTable.Routes.Insert(0, route);
+
+                        var currentDomain = AppDomain.CurrentDomain;
+
+                        if (currentDomain.GetAssemblies().Any(a => a.GetName().Name == "KenticoCacheDoctor.Glimpse"))
+                        {
+                            IsGlimpsePackagePresent = true;
+                        }
 
                         HasAppStarted = true;
                     }
                 }
             }
 
- 
+
         }
 
-        static void OnBeginRequest(object sender, System.EventArgs e)
+        private static void OnBeginRequest(object sender, System.EventArgs e)
         {
             return;
         }
 
-        static void OnEndRequest(object sender, System.EventArgs e)
+        private static void OnEndRequest(object sender, System.EventArgs e)
         {
+            /*
+             * We don't want to write to the Response here since Glimpse
+             * will handle displaying cache information
+             */
+            if (IsGlimpsePackagePresent)
+            {
+                return;
+            }
+
             var handler = new CacheDoctorHttpHandler();
 
             handler.ProcessRequest(HttpContext.Current);

@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <VersionPrefix>2.0.0</VersionPrefix>
-    <PackageId>Mcbeev.Kentico.CacheDoctor</PackageId>
-    <PackageDescription>Kentico Cache Doctor is a utility for working with Cache on a Kentico 12 site.</PackageDescription>
-    <Title>Kentico Cache Doctor</Title>
-    <Authors>Brian McKeiver</Authors>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <PackageId>Mcbeev.Kentico.CacheDoctor.Glimpse</PackageId>
+    <PackageDescription>Kentico Cache Doctor is a utility for working with Cache on a Kentico 12 site. This is a Glimpse tab integration for the library.</PackageDescription>
+    <Title>Kentico Cache Doctor Glimpse</Title>
+    <Authors>Sean G. Wright</Authors>
     <licenseUrl>https://raw.githubusercontent.com/mcbeev/KenticoCacheDoctor/master/LICENSE</licenseUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/mcbeev/KenticoCacheDoctor/master/LICENSE</PackageLicenseUrl>
     <projectURL>https://github.com/mcbeev/KenticoCacheDoctor</projectURL>
@@ -20,9 +20,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Kentico.Libraries" Version="[12.0.0, 12.1.0)" />
-    <PackageReference Include="Microsoft.Web.Infrastructure" Version="1.0.0.0" />
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+    <PackageReference Include="Glimpse" Version="1.8.2" />
+    <PackageReference Include="Glimpse.AspNet" Version="1.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KenticoCacheDoctor\KenticoCacheDoctor.csproj" />
   </ItemGroup>
 
   <ItemGroup>
