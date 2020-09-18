@@ -25,7 +25,7 @@ namespace KenticoCacheDoctor
                         // Run application StartUp code here
                         var route = new Route(Constants.RouteName, new KenticoCacheDoctorRouteHandler());
                         //RouteTable.Routes Needs to be Added instead of inserted otherwise it applies incorrectly;
-                        RouteTable.Routes.Add(Constants.RouteName, route);
+                        RouteTable.Routes.Insert(0, route);
 
                         var currentDomain = AppDomain.CurrentDomain;
 

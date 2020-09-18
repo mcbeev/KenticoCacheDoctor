@@ -106,7 +106,12 @@ namespace KenticoCacheDoctor.Glimpse
                     }
                     else
                     {
-                        data[2] = containerValue.Data;
+                        data[2] = new Dictionary<string, object>()
+                        {
+                            { "Created", containerValue.Created },
+                            { "Expiration", containerValue.AbsoluteExpiration },
+                            { "Object",  containerValue.Data}
+                        };
                     }
                 }
                 else
